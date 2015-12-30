@@ -1,0 +1,15 @@
+Package: svdvis
+Type: Package
+Title: Singular Value Decomposition Visualization
+Version: 0.1
+Date: 2015-12-02
+Author: Neo Christopher Chung
+Maintainer: Neo Christopher Chung <nchchung@gmail.com>
+Description: Visualize singular value decompositions (SVD), principal component analysis (PCA), factor analysis (FA) and related methods.
+Imports: ggplot2, GGally, gridExtra, scales, reshape2, RColorBrewer, grDevices
+License: GPL-2
+LazyData: TRUE
+RoxygenNote: 5.0.0
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
