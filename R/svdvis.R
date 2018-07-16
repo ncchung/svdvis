@@ -42,11 +42,11 @@ svd.scree <- function(svd.obj, subr=NULL, maintitle="Scree Plot", axis.title.x="
   pve$names = factor(pve$names, levels=unique(names(svd.obj$d)))
   g = ggplot(pve, aes(names, pve)) + geom_point() + theme_bw()
   gout = g + ylim(0,NA) +
-    labs(title=maintitle, axis.title.x=axis.title.x, axis.title.y=axis.title.y)
+    labs(title=maintitle, x=axis.title.x, y=axis.title.y)
 
   if(!is.null(subr)) {
     gsub = g + coord_cartesian(xlim = c(0.5, subr+.5)) + ylim(min(pve$pve[1:subr])-1, max(pve$pve[1:subr])+1) +
-      labs(title=paste("First",subr,"singular values"), axis.title.x=axis.title.x, axis.title.y=axis.title.y)
+      labs(title=paste("First",subr,"singular values"), x=axis.title.x, y=axis.title.y)
     gout = grid.arrange(gout, gsub, nrow=1)
   }
 
